@@ -140,19 +140,19 @@ contract MyEpicGame is ERC721 {
         string memory json = Base64.encode(
             bytes(
                 string(
-                    abi.encodePacked(
-                        '{"name": "',
-                        charAttributes.name,
-                        ' -- NFT #: ',
-                        Strings.toString(_tokenId),
-                        '", "description": "This is an NFT that lets people play in the game Pokemon Metaverse!", "image": "',
-                        charAttributes.imageURI,
-                        '", "attributes": [ { "trait_type": "Health Points", "value": ', strHp, ', "max_value":', strMaxHp, '}, { "trait_type": "Attack Damage", "value": ',
-                        strAttackDamage,'} ]}'
-                    )
+                abi.encodePacked(
+                    '{"name": "',
+                    charAttributes.name,
+                    ' -- NFT #: ',
+                    Strings.toString(_tokenId),
+                    '", "description": "An epic NFT", "image": "ipfs://',
+                    charAttributes.imageURI,
+                    '", "attributes": [ { "trait_type": "Health Points", "value": ',strHp,', "max_value":',strMaxHp,'}, { "trait_type": "Attack Damage", "value": ',
+                    strAttackDamage,'} ]}'
+                )
                 )
             )
-        );
+            );
 
         string memory output = string(
             abi.encodePacked("data:application/json;base64,", json)
