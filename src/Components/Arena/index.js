@@ -92,7 +92,7 @@ const Arena = ({ characterNFT,  setCharacterNFT }) => {
             setShowToast(true);
             setTimeout(() => {
                 setShowToast(false);
-            }, 5000);
+            }, 1000);
           }
         } catch (error) {
           console.error('Error attacking boss:', error);
