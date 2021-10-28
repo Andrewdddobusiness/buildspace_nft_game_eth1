@@ -55,9 +55,9 @@ const App = () => {
     /*
      * If the app is currently loading, just render out LoadingIndicator
      */
-    if (isLoading) {
-      return <LoadingIndicator />;
-    }
+    // if (isLoading) {
+    //   return <LoadingIndicator />;
+    // }
   
     if (!currentAccount) {
       return (
